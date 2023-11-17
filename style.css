@@ -1,0 +1,360 @@
+/* CSS reset STARTS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* CSS reset ENDS*/
+
+
+
+
+/* ROOT STARTS */
+:root {
+    /* General background */
+    --background-color1: #6897752b;
+    --background-color2: #e4f4e5f3;
+
+
+    --main-color1: #689775;
+    --main-color2: #90bf9d;
+    --main-color3: #2b6231;
+
+
+
+    --secondary-color1: #eee16e;
+    --secondary-color2: #c5b94d;
+
+    /* For all font */
+    --font-color1: #283434;
+}
+
+/* ROOT ENDS*/
+
+
+
+/* Body CSS STARTS*/
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: rgba(0, 0, 0, 0.971);
+    color: gold;
+    font-size: 18px;
+}
+
+/* Body CSS ENDS*/
+
+/* PAGE TITLE CONTAINER STARTS*/
+.page-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    margin-inline: auto;
+}
+
+.page-title-container > * {
+    text-align: center;
+    padding: .5rem;
+    border: 0px;
+    border-radius: 1rem;
+    outline: none;
+}
+
+
+.site-name {
+    font-size: 7rem;
+    font-weight: 800;
+    text-decoration: line-through;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.site-name:hover {
+    color:#fbf1cf;
+}
+
+.byos {
+    font-size: 1.5rem;
+    line-height: 0.5rem;
+    font-weight: 100;
+}
+
+#theatre-selection {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    width: 50%;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #283434;
+    background-color: #fbf1cf;
+    font-size: 1.2rem;
+    
+
+}
+
+#search-field {
+    padding: 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #283434;
+    background-color: #f5bd03;
+    font-size: 1.4rem;
+}
+/* PAGE TITLE CONTAINER ENDS */
+
+
+
+/* MOVIES-AND-INFO-CONTAINER STATRS */
+
+
+
+
+/* MOVIES-AND-INFO-CONTAINER ENDS*/
+
+
+
+/* MOVIES CONTAINER STARTS */
+.movies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+    margin-inline: auto;
+    margin-top: 2%;
+    grid-column-start: 2;
+}
+
+.movie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 2%;
+    width: 100%;
+}
+
+.movie-item>* {
+    padding-block: 1%;
+}
+
+.movie-title {
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+.movie-title:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.movie-image {
+    border-radius: 2rem;
+    opacity: 0.8;
+    width: 50%;
+}
+.plot-info {
+    max-width: 50%;
+    text-align: center;
+}
+.director-info {
+    text-decoration: underline;
+}
+/* MOVIES CONTAINER ENDS*/
+
+
+
+/* General SHOW/HIDE item classes STARTS */
+.show-element {
+    display: flex;
+}
+
+.hide-element {
+    display: none;
+}
+
+
+/* General SHOW/HIDE item classes ENDS*/
+
+
+
+
+
+/* ALL HOVER effects & transitions STARTS*/
+.hover-effect:hover {
+    transform: scale(1.2);
+    transition: transform 0.1s ease-in-out;
+    opacity: 1;
+}
+
+.sort-list-items-container>li:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.clear-all-button:hover {
+    cursor: pointer;
+    background-color: var(--alert-color1);
+}
+
+/* ALL HOVER effects & transitions ENDS*/
+
+/* ANIMATIONS STARTS */
+/* ANIMATIONS ENDS */
+
+
+
+
+
+/* MEDIA QUERIES START */
+@media (max-width: 1400px) {}
+
+@media (max-width: 900px) {
+    .page-title-container > * {
+        font-size: 1rem;;
+    }
+    .site-name {
+        font-size: 4rem;;
+    }
+    #theatre-selection {
+        font-size: 1rem;;
+    }
+    #search-field {
+        font-size: 1rem;;
+    }
+}
+
+/* MEDIA QUERIES ENDS */
+
