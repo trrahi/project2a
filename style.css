@@ -175,7 +175,6 @@ body {
     color: gold;
     font-size: 18px;
 }
-
 /* Body CSS ENDS*/
 
 /* PAGE TITLE CONTAINER STARTS*/
@@ -189,17 +188,14 @@ body {
 
 .page-title-container > * {
     text-align: center;
-    padding: .5rem;
     border: 0px;
     border-radius: 1rem;
     outline: none;
 }
 
-
 .site-name {
     font-size: 7rem;
     font-weight: 800;
-    text-decoration: line-through;
     text-decoration: underline;
     margin-bottom: 2rem;
     margin-top: 1rem;
@@ -210,43 +206,106 @@ body {
 
 .byos {
     font-size: 1.5rem;
-    line-height: 0.5rem;
-    font-weight: 100;
 }
 
 #theatre-selection {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
     width: 50%;
-    text-align: center;
     padding: 1rem;
     font-family: 'IBM Plex Mono', monospace;
     color: #283434;
     background-color: #fbf1cf;
     font-size: 1.2rem;
-    
-
 }
 
 #search-field {
     padding: 1.5rem;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: inherit;
     color: #283434;
     background-color: #f5bd03;
-    font-size: 1.4rem;
+    font-size: 1rem;
+    width: 30%;
+    margin-block: 10px;
 }
 /* PAGE TITLE CONTAINER ENDS */
 
 
 
-/* MOVIES-AND-INFO-CONTAINER STATRS */
+
+/* MOVIES CONTAINER STARTS */
+
+.movies-container {
+    max-width: 50%;
+    margin-inline: auto;
+}
+
+.movie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.movie-item> * {
+    padding-block: 5px;
+}
+
+.movie-title {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+}
+.movie-title:hover {
+    color: red;
+    cursor: pointer;
+}
+.movie-image {
+    border-radius: 2rem;
+    width: 40%;
+    margin-top: 4rem;
+}
+.plot-info {
+    max-width: 50%;
+    text-align: center;
+}
+.director-info {
+    text-decoration: underline;
+    margin-top: 25px;
+}
+/* MOVIES CONTAINER ENDS*/
 
 
 
 
-/* MOVIES-AND-INFO-CONTAINER ENDS*/
-/* header thing effect */
-header {
+
+
+
+/* General SHOW/HIDE item classes STARTS */
+.show-element {
+    display: flex;
+}
+
+.hide-element {
+    display: none;
+}
+/* General SHOW/HIDE item classes ENDS*/
+
+
+
+
+/* ALL HOVER effects & transitions STARTS*/
+.hover-effect:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+    opacity: 1;
+}
+/* ALL HOVER effects & transitions ENDS*/
+
+
+
+/* ANIMATIONS STARTS */
+/* Notice text animation */
+.choose-theatre-notice {
     margin-top: 10%;
     font-size: 4rem;
     text-align: center;
@@ -280,93 +339,6 @@ header {
       }
 }
 
-
-/* MOVIES CONTAINER STARTS */
-
-.movies-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 50%;
-    margin-inline: auto;
-    margin-top: 2%;
-    grid-column-start: 2;
-}
-
-.movie-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-block: 2%;
-    width: 100%;
-}
-
-.movie-item>* {
-    padding-block: 1%;
-}
-
-.movie-title {
-    font-size: 1.4rem;
-    text-decoration: underline;
-    text-align: center;
-}
-.movie-title:hover {
-    color: red;
-    cursor: pointer;
-}
-
-.movie-image {
-    border-radius: 2rem;
-    opacity: 0.8;
-    width: 50%;
-}
-.plot-info {
-    max-width: 50%;
-    text-align: center;
-}
-.director-info {
-    text-decoration: underline;
-}
-/* MOVIES CONTAINER ENDS*/
-
-
-
-/* General SHOW/HIDE item classes STARTS */
-.show-element {
-    display: flex;
-}
-
-.hide-element {
-    display: none;
-}
-
-
-/* General SHOW/HIDE item classes ENDS*/
-
-
-
-
-
-/* ALL HOVER effects & transitions STARTS*/
-.hover-effect:hover {
-    transform: scale(1.2);
-    transition: transform 0.1s ease-in-out;
-    opacity: 1;
-}
-
-.sort-list-items-container>li:hover {
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-}
-
-.clear-all-button:hover {
-    cursor: pointer;
-    background-color: var(--alert-color1);
-}
-
-/* ALL HOVER effects & transitions ENDS*/
-
-/* ANIMATIONS STARTS */
 /* ANIMATIONS ENDS */
 
 
@@ -378,47 +350,37 @@ header {
 
 @media (max-width: 900px) {
     .page-title-container > * {
-        font-size: 1rem;;
+        font-size: 1rem;
         line-height:1rem;
     }
     .site-name {
-        margin-top: 2rem;;
+        margin-top: 2rem;
         font-size: 3rem;
     }
     #theatre-selection {
-        font-size: 1rem;;
-        width: 70%;
+        font-size: 0.7rem;;
+        width: 100%;
+        font-size: .7rem;
     }
     #search-field {
-        font-size: 1rem;;
+        font-size: .8rem;;
         width: 80%;
+        padding: 1rem;;
     }
     .movies-container {
         max-width: 80%;
+        margin-inline: auto;
         font-size: 1rem;
     }
-    
-    .movie-item {
-        width: 120%;
-    }
-    
-    .movie-item>* {
-        padding-block: 1%;
+    .movie-item > * {
+        font-size: .8rem;;
+        padding: 3px;
     }
     
     .movie-title {
-        font-size: 1.4rem;
-        text-decoration: underline;
-        text-align: center;
+        font-size: 1.2rem;
     }
-    .movie-title:hover {
-        color: red;
-        cursor: pointer;
-    }
-    
     .movie-image {
-        border-radius: 2rem;
-        opacity: 0.8;
         width: 60%;
         margin-top: 3rem;
     }
@@ -426,13 +388,8 @@ header {
         max-width: 50%;
         text-align: center;
     }
-    .director-info {
-        text-decoration: underline;
-    }
-    header {
-        margin-top: 10%;
-        font-size: 2rem;
-        text-align: center;
+    .choose-theatre-notice {
+        font-size: 1.5rem;
     }
 }
 
