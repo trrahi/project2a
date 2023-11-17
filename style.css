@@ -245,10 +245,44 @@ body {
 
 
 /* MOVIES-AND-INFO-CONTAINER ENDS*/
-
+/* header thing effect */
+header {
+    margin-top: 10%;
+    font-size: 4rem;
+    text-align: center;
+}
+.bouncing-effect {
+    animation: bouncing-effect 2s ease-in-out infinite;
+}
+.bouncing-effect-small {
+    animation: bouncing-effect-small 2s ease-in-out infinite;
+}
+@keyframes bouncing-effect {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+}
+@keyframes bouncing-effect-small {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-3px);
+      }
+      60% {
+        transform: translateY(-1px);
+      }
+}
 
 
 /* MOVIES CONTAINER STARTS */
+
 .movies-container {
     display: flex;
     flex-direction: column;
@@ -274,6 +308,7 @@ body {
 .movie-title {
     font-size: 1.4rem;
     text-decoration: underline;
+    text-align: center;
 }
 .movie-title:hover {
     color: red;
@@ -344,15 +379,60 @@ body {
 @media (max-width: 900px) {
     .page-title-container > * {
         font-size: 1rem;;
+        line-height:1rem;
     }
     .site-name {
-        font-size: 4rem;;
+        margin-top: 2rem;;
+        font-size: 4rem;
     }
     #theatre-selection {
         font-size: 1rem;;
+        width: 70%;
     }
     #search-field {
         font-size: 1rem;;
+        width: 80%;
+    }
+    .movies-container {
+        max-width: 80%;
+        font-size: 1rem;
+    }
+    
+    .movie-item {
+        width: 120%;
+    }
+    
+    .movie-item>* {
+        padding-block: 1%;
+    }
+    
+    .movie-title {
+        font-size: 1.4rem;
+        text-decoration: underline;
+        text-align: center;
+    }
+    .movie-title:hover {
+        color: red;
+        cursor: pointer;
+    }
+    
+    .movie-image {
+        border-radius: 2rem;
+        opacity: 0.8;
+        width: 60%;
+        margin-top: 3rem;
+    }
+    .plot-info {
+        max-width: 50%;
+        text-align: center;
+    }
+    .director-info {
+        text-decoration: underline;
+    }
+    header {
+        margin-top: 10%;
+        font-size: 2rem;
+        text-align: center;
     }
 }
 

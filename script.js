@@ -24,6 +24,7 @@ const byos = document.querySelector(".byos")
 const theatreSelectionDropdownMenu = document.querySelector("#theatre-selection")
 const searchField = document.querySelector("#search-field")
 // Movie container 
+const chooseTheatreNotice = document.querySelector(".choose-theatre-notice")
 const moviesContainer = document.querySelector(".movies-container")
 const movieImage = document.querySelector(".movie-image")
 const movieTitle = document.querySelector(".movie-title")
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", getTheaterAreasListToDropdownAfter
 theatreSelectionDropdownMenu.addEventListener("input", getMoviesInSelectedTheatre)
 searchField.addEventListener("input", searchMovieInTheatre)
 moviesContainer.addEventListener("click", getMovieInfo)
+theatreSelectionDropdownMenu.addEventListener("click", removeNotice)
 // ADDING EVENT LISTENERS ENDS
 
 
@@ -62,10 +64,15 @@ function getTheaterAreasListToDropdownAfterDOMContentHasLoaded() {
         }
     } 
 }
+// remove choose theatre notece
+function removeNotice() {
+    chooseTheatreNotice.remove()
+    theatreSelectionDropdownMenu.classList.remove("bouncing-effect-small")
+
+}
 // Display movies showing in selected theatre
 function getMoviesInSelectedTheatre() {
     const selectedTheatre = theatreSelectionDropdownMenu.value
-    console.log(selectedTheatre);
 
     const XHR = new XMLHttpRequest()
     XHR.open("GET", finnkinoSchedule(selectedTheatre, dateNow), true)
@@ -157,7 +164,7 @@ function getMovieInfo(event) {
                 if (responseTextAsJSON.Response == "False") {
                     const errorElement = document.createElement("h2")
                     errorElement.classList.add("error-warning")
-                    errorElement.textContent = "Could not fetch movie details, Finnkino must be angry at me"
+                    errorElement.textContent = "Could not fetch movie details, we probably ran out of budget."
                     movieItemTargeted.insertAdjacentElement("beforeend", errorElement)
                     setTimeout(() => {
                         errorElement.remove()
