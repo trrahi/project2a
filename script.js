@@ -13,7 +13,7 @@ const finnkinoSchedule = (area, date) => {
     return `https://www.finnkino.fi/xml/Schedule/?area=${area}&dt=${date}`
 }
 const openMovieDataBaseAPIcall = (title) => {
-    return `http://www.omdbapi.com/?apikey=${apiKeyOpenMovieDataBase}&t=${title}`
+    return `https://www.omdbapi.com/?apikey=${apiKeyOpenMovieDataBase}&t=${title}`
 }
 
 // REFERENCES TO HTML ELEMENTS STARTS
@@ -226,6 +226,7 @@ function formatMovieName(nameNotFormatted) {
             nameFormatted = nameFormatted + nameNotFormatted[i]
         }
     }
+    console.log(nameFormatted.toLocaleLowerCase());
     return nameFormatted.toLocaleLowerCase()
 }
 // FUNCTIONS ENDS
